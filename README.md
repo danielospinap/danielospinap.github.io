@@ -1,1 +1,0 @@
-# danielospinap.github.io
