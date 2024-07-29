@@ -27,6 +27,7 @@ body {
 
 .container {
     display: none;
+    font-size: 3rem;
     color: #C2A365;
     margin: 0 auto;
     text-align: center;
