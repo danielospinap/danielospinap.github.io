@@ -16,15 +16,18 @@ body {
 }
 
 body {
-    align-items: center;
-    background-color: #ffd54f;
+    background-color: #1c2229;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .container {
-    color: #333;
+    display: none;
+    color: #C2A365;
     margin: 0 auto;
     text-align: center;
 }
@@ -33,19 +36,6 @@ p {
     font-weight: normal;
     letter-spacing: 0.125rem;
     text-transform: uppercase;
-}
-
-li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
-}
-
-li span {
-    display: block;
-    font-size: 4.5rem;
 }
 
 img {
@@ -74,5 +64,128 @@ img {
 
     li span {
         font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+/*Loading*/
+
+.loading {
+    position: relative;
+}
+.loading > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading__circle {
+    stroke-dasharray: 2, 17;
+    animation: rotate-circle 10s linear infinite;
+}
+.loading__rotating-square {
+    fill: #1c2229;
+    animation: rotate-square 4s infinite;
+    animation-delay: 1s;
+}
+.loading__left-inner-square {
+    position: absolute;
+    right: -1px;
+    top: calc(50% - 3px);
+    transform: translateY(-50%) rotate(90deg);
+}
+.loading__left-inner-square path {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: draw-inner 2s linear infinite;
+    animation-direction: reverse;
+    animation-delay: 1s;
+}
+.loading__right-inner-square {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3px);
+    transform: translateY(-50%) rotate(-90deg);
+}
+.loading__right-inner-square path {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: draw-inner 2s linear infinite;
+    animation-direction: reverse;
+    animation-delay: 1s;
+}
+.loading__left-outer-square {
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+.loading__left-outer-square path {
+    stroke-dasharray: 387.5;
+    stroke-dashoffset: 387.5;
+    animation: draw-outer 2s linear infinite;
+    animation-direction: reverse;
+    animation-delay: 1s;
+}
+.loading__right-outer-square {
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+.loading__right-outer-square path {
+    stroke-dasharray: 387.5;
+    stroke-dashoffset: 387.5;
+    animation: draw-outer 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-square {
+    0% {
+        transform: rotate(0deg);
+    }
+    8.33%,
+    25% {
+        transform: rotate(90deg);
+    }
+    33.33%,
+    50% {
+        transform: rotate(180deg);
+    }
+    58.33%,
+    75% {
+        transform: rotate(270deg);
+    }
+    83.33%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes draw-outer {
+    0% {
+        stroke-dashoffset: 387.5;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -387.5;
+    }
+}
+@keyframes draw-inner {
+    0% {
+        stroke-dashoffset: 150;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -150;
     }
 }

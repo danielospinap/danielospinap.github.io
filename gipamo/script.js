@@ -9,8 +9,11 @@
             },
         }
     );
-    const content = await rawResponse.text();
-
+    const content = await rawResponse.text().replace(/['"]+/g, '');
+    console.log("hola");
     document.getElementById("headline").innerHTML += content;
+    document.getElementById("loading").style.display = 'none';
+    document.getElementById("container").style.display = 'block';
+    
     console.log(x);
 })();

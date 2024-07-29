@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <title>Gipamo lolero </title>
-    </head>
-    <body>
-        <div class="container">
-            <p id="headline">Gipamo no es lolero pero su última partida fue </p>
-            <img src="img\sad.webp" alt="sad">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Gipamo</title>
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <div>
+            <svg class="loading__circle" width="120" height="120" viewBox="0 0 120 120" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="57.5" stroke="#C2A365" stroke-width="5" />
+            </svg>
         </div>
-    </body>
+        <svg class="loading__left-inner-square" width="59" height="58" viewBox="0 0 59 58" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.5 2.5L56 29L29.5 55.5L3 29L29.5 2.5Z" stroke="#C2A365" stroke-width="3" />
+        </svg>
+        <svg class="loading__right-inner-square" width="59" height="58" viewBox="0 0 59 58" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.5 2.5L56 29L29.5 55.5L3 29L29.5 2.5Z" stroke="#C2A365" stroke-width="3" />
+        </svg>
+        <div>
+            <svg class="loading__rotating-square width=" 97" height="97" viewBox="0 0 97 97" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="48.2549" y="3" width="64" height="64" transform="rotate(45 48.2549 3)" stroke="#C2A365"
+                    stroke-width="4" />
+            </svg>
+        </div>
+        <svg class="loading__left-outer-square" width="139" height="139" viewBox="0 0 139 139" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M69.5 1L138 69.5L69.5 138L1 69.5L69.5 1Z" stroke="#C2A365" />
+        </svg>
+        <svg class="loading__right-outer-square" width="139" height="139" viewBox="0 0 139 139" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M69.5 1L1 69.5L69.5 138L138 69.5L69.5 1Z" stroke="#C2A365" />
+        </svg>
+    </div>
+    <div class="container" id="container">
+            <p id="headline">Gipamo no es lolero pero su última partida fue </p>
+            <img src="img\shaco.jpg" alt="sad">
+        </div>
+</body>
+
 </html>
