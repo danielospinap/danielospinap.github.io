@@ -9,11 +9,8 @@
             },
         }
     );
-    const content = await rawResponse.text().replace(/['"]+/g, '');
-    console.log("hola");
-    document.getElementById("headline").innerHTML += content;
+    let content = await rawResponse.text();
+    document.getElementById("headline").innerHTML += content.replace(/['"]+/g, '');
     document.getElementById("loading").style.display = 'none';
     document.getElementById("container").style.display = 'block';
-    
-    console.log(x);
 })();
